@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> create new account</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 600px) {
+      #main-container {
+        width: 100%;
+      }
+
+      input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #DOB {
+        width: 100%;
+      }
+
+      #gender {
+        flex-direction: column;
+      }
+      #row-two{
+        width: 100%;
+      }
+      #footer-container{
+        padding: 10px;
+      }
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -17,7 +47,7 @@
       padding: 7px;
       border-style: none;
       border-radius: 5px;
-      width: 100px;
+      width: 100%;
       margin-bottom: 7px;
       margin-top: 7px;
     }
@@ -35,8 +65,10 @@
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
-      width: 50vw;
+      width: 100%;
       margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
     }
 
     input {
@@ -48,7 +80,9 @@
       border-top-color: rgb(204, 208, 213);
       border: 1px solid rgb(204, 208, 213);
       padding: 10px;
-      width: 250px;
+      width: 100%;
+      max-width: 100%;
+
     }
 
     ::placeholder {
@@ -60,6 +94,66 @@
       border-color: rgb(8, 102, 255);
       outline: none;
     }
+
+    #row-two {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+    }
+
+    #DOB {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+
+    #gender {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: grey;
+      padding: 10px;
+    }
+
+    #sign-up-btn {
+      text-align: center;
+    }
+
+    #already-have-an-acc {
+      text-align: center;
+      color: rgb(8, 102, 255)
+    }
+
+    #line-accross {
+      width: 100%;
+      height: 1px;
+      background-color: black;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #footer-container {
+      width: 100% ;
+    }
+
+    select {
+  padding: 10px;
+  border: 1px solid rgb(204, 208, 213);
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+select:focus {
+  border-color: rgb(8, 102, 255);
+  outline: none;
+}
   </style>
 </head>
 
@@ -73,66 +167,125 @@
         <div style="text-align: center; margin-bottom: 7px;">it's quick and easy</div>
 
         <form>
-          <div style="display: flex;justify-content: space-between;">
-            <input style="width: 210px;" placeholder="First name"> <input style="width: 210px;" placeholder="Surname">
+          <div id="row-two">
+            <input placeholder="First name"> <input placeholder="Surname">
           </div>
 
           <p>Date of birth</p>
-          <div style="display: flex;justify-content: space-between;">
-            <input style="width: 210px;" placeholder="25"> <input style="width: 210px;" placeholder="Dec">
+          <div id="DOB">
+            <select>
+              <option value="">day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <select>
+              <option value="">month</option>
+              <option value="jan">jan</option>
+              <option value="feb">feb</option>
+              <option value="mar">mar</option>
+              <option value="apr">apr</option>
+              <option value="may">may</option>
+              <option value="jun">jun </option>
+              <option value="july">july</option>
+              <option value="aug">aug</option>
+              <option value="sep">sep</option>
+              <option value="oct">oct</option>
+              <option value="nov">nov</option>
+              <option value="dec">dec</option>
+            </select>
+            <select>
+              <option value="">year</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+            </select>
           </div>
-          <input style="width: 210px;" placeholder="2025">
+
           <p>Gender</p>
-          <div style="display: flex; justify-content: space-between;">
-            <input style="width: 125px;" placeholder="Female"> <input style="width: 125px;" placeholder="Male"> <input
-              style="width: 125px;" placeholder="Custom">
+          <div id="gender">
+            <input placeholder="Female"> <input placeholder="Male"> <input placeholder="Custom">
           </div>
 
 
           <div>
-            <input style="width: 450px;" placeholder="Mobile number or email address">
+            <input placeholder="Mobile number or email address">
           </div>
           <div>
-            <input style="width: 450px;" placeholder="New password">
+            <input placeholder="New password">
           </div>
 
-          <p>people who use our service may have uploaded your contact information to Facebook. <span>learn more</span>
+          <p class="footer-text">people who use our service may have uploaded your contact information to Facebook.
+            <span>learn more</span>
           </p>
-          <p>By clicking sign up, you agree to our <span>Terms, Privacy Policy</span> and <span>Cookies Policy</span>.
+          <p class="footer-text">By clicking sign up, you agree to our <span>Terms, Privacy Policy</span> and
+            <span>Cookies Policy</span>.
           </p>
-          <div>
+          <div class="footer-text">
             you may receive SMS notifications from us and can opt out at any time.
           </div>
-          <div style="text-align: center;">
-            <button id="sign-up">Sign Up</button>
+          <div id="sign-up-btn">
+            <button id="sign-up" type="button">Sign Up</button>
           </div>
-          <div style="text-align: center; color: rgb(8, 102, 255)">Aready have an account?</div>
+          <div id="already-have-an-acc">Already have an account?</div>
         </form>
       </div>
     </div>
   </div>
   <!-- FOOTER -->
-  <div style="margin-top: 15px;">English (UK)
-    Hausa
-    Français (France)
-    Português (Brasil)
-    Español
-    العربية
-    Bahasa Indonesia
-    Deutsch
-    日本語
-    Italiano
-    हिन्दी
-  </div>
-  <!-- LINE ACCROSS -->
-  <div style="width: 100%; height: 1px; background-color: black;margin-top: 20px;"></div>
+  <div id="footer-container">
+    <div class="footer-text">English (UK)
+      Hausa
+      Français (France)
+      Português (Brasil)
+      Español
+      العربية
+      Bahasa Indonesia
+      Deutsch
+      日本語
+      Italiano
+      हिन्दी
+    </div>
+    <!-- LINE ACCROSS -->
+    <div id="line-accross"></div>
 
-  <div style="font-size: 12px; margin-top: 7px;margin-bottom: 7px;">Sign upLog inMessengerFacebook LiteVideoMeta PayMeta
-    StoreMeta QuestRay-Ban MetaMeta
-    AIMeta AI more
-    contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
-    PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
-  <div style="margin-top: 10px; font-size: 12px;">Meta © 2025</div>
+    <div class="footer-text">Sign upLog inMessengerFacebook LiteVideoMeta PayMeta
+      StoreMeta QuestRay-Ban MetaMeta
+      AIMeta AI more
+      contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
+      PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
+    <div class="footer-text">Meta © 2025</div>
+  </div>
+
 </body>
 
 </html>

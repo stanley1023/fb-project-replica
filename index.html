@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>facebook log-in page</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 600px) {
+      #container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+      }
+
+      #form-container {
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      input,
+      #login-btn {
+        width: 100%;
+      }
+
+      #fb-header {
+        font-size: 35px;
+        text-align: center;
+      }
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -16,7 +43,8 @@
       color: white;
       border-radius: 8px;
       border-style: none;
-      width: 300px;
+      max-width: 300px;
+      width: 100%;
       padding: 10px;
     }
 
@@ -28,14 +56,15 @@
       display: flex;
       justify-self: center;
       padding: 10px;
+      display: block;
     }
 
     #container {
       display: flex;
       align-items: center;
       padding: 10px;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      min-height: 100vh;
       justify-content: center;
       align-items: center;
       background-color: rgb(231, 231, 244);
@@ -50,7 +79,8 @@
       border-top-color: rgb(204, 208, 213);
       border: 1px solid rgb(204, 208, 213);
       padding: 10px;
-      width: 300px;
+      max-width: 300px;
+      width: 100%;
     }
 
     ::placeholder {
@@ -71,35 +101,74 @@
       border-color: rgb(8, 102, 255);
       outline: none;
     }
+
+    #fb-header {
+      color: rgb(8, 102, 255);
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    #fb-header-container {
+      margin-left: 50px;
+      margin-right: 20px;
+    }
+
+    #forgotten-password {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: rgb(8, 102, 255);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .line-accross {
+      height: 0.5px;
+      width: 100%;
+      background-color: black;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    #create-a-page {
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+      color: grey;
+      font-size: 12px;
+      padding: 10px;
+    }
   </style>
 </head>
 
 <body>
   <div id="container">
-    <div style="margin-left: 50px;margin-right: 20px;">
-      <p style="color: rgb(8, 102, 255); font-size: 50px; margin-bottom: 10px;">facebook</p>
+    <div id="fb-header-container">
+      <p id="fb-header">facebook</p>
       <p>Facebook helps you connect and share with the people in your life.</p>
     </div>
     <div id="form-container">
       <form>
-        <input placeholder="Email address or phone number"> <br>
+        <input type="email" placeholder="Email address or phone number"> <br>
         <input placeholder="Password">
-        <div><button id="login-btn">Log in</button></div>
-        <div style="margin-top: 10px; margin-bottom: 10px;color:rgb(8, 102, 255); text-align: center; font-size: 14px;">
+        <div><button id="login-btn" type="button">Log in</button></div>
+        <div id="forgotten-password">
           Forgotten password?</div>
 
-        <div style="height: 0.5px; width: 100%; background-color: black;margin-top: 20px; margin-bottom: 20px;"></div>
+        <div class="line-accross"></div>
 
         <button id="newAcc-btn" type="button" onclick="newAcc()">create new account</button>
 
-        <p style="font-size: 13px; text-align: center;"><strong> create a page </strong>for a celebrity brand or
+        <p id="create-a-page"><strong> create a page </strong>for a celebrity brand or
           business</p>
       </form>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div style="margin-top: 25px; color: grey;">English (UK)
+  <div class="footer-text">English (UK)
     Hausa
     Français (France)
     Português (Brasil)
@@ -111,21 +180,21 @@
     Italiano
     हिन्दी
   </div>
-  <div style="width: 100%; height: 1px; background-color: black;margin-top: 20px;"></div>
+  <div class="line-accross"></div>
 
-  <div style="font-size: 12px; margin-top: 7px;margin-bottom: 7px; color: grey;">Sign upLog inMessengerFacebook
+  <div class="footer-text">Sign upLog inMessengerFacebook
     LiteVideoMeta PayMeta
     StoreMeta QuestRay-Ban MetaMeta
     AIMeta AI more
     contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
     PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
-  <div style="margin-top: 20px; font-size: 12px; margin-bottom: 15px; color: grey;">Meta © 2025</div>
+  <div class="footer-text">Meta © 2025</div>
 
   <script>
-
     const newAcc = () => {
       window.location.href = "newAcc.html";
     }
   </script>
 </body>
+
 </html>
