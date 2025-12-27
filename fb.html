@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>facebook log-in page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #login-btn {
+      background-color: rgb(8, 102, 255);
+      color: white;
+      border-radius: 8px;
+      border-style: none;
+      width: 300px;
+      padding: 10px;
+    }
+
+    #newAcc-btn {
+      background-color: rgb(35, 182, 35);
+      color: white;
+      border-radius: 5px;
+      border-style: none;
+      display: flex;
+      justify-self: center;
+      padding: 10px;
+    }
+
+    #container {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(231, 231, 244);
+    }
+
+    input {
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border-left-color: rgb(204, 208, 213);
+      border-right-color: rgb(204, 208, 213);
+      border-bottom-color: rgb(204, 208, 213);
+      border-top-color: rgb(204, 208, 213);
+      border: 1px solid rgb(204, 208, 213);
+      padding: 10px;
+      width: 300px;
+    }
+
+    ::placeholder {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    #form-container {
+      margin-right: 50px;
+      border: 1px solid black;
+      padding: 15px;
+      background-color: white;
+      border-style: none;
+      border-radius: 5px;
+    }
+
+    input:focus {
+      border-color: rgb(8, 102, 255);
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div style="margin-left: 50px;margin-right: 20px;">
+      <p style="color: rgb(8, 102, 255); font-size: 50px; margin-bottom: 10px;">facebook</p>
+      <p>Facebook helps you connect and share with the people in your life.</p>
+    </div>
+    <div id="form-container">
+      <form>
+        <input placeholder="Email address or phone number"> <br>
+        <input placeholder="Password">
+        <div><button id="login-btn">Log in</button></div>
+        <div style="margin-top: 10px; margin-bottom: 10px;color:rgb(8, 102, 255); text-align: center; font-size: 14px;">
+          Forgotten password?</div>
+
+        <div style="height: 0.5px; width: 100%; background-color: black;margin-top: 20px; margin-bottom: 20px;"></div>
+
+        <button id="newAcc-btn" type="button" onclick="newAcc()">create new account</button>
+
+        <p style="font-size: 13px; text-align: center;"><strong> create a page </strong>for a celebrity brand or
+          business</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top: 25px; color: grey;">English (UK)
+    Hausa
+    Français (France)
+    Português (Brasil)
+    Español
+    العربية
+    Bahasa Indonesia
+    Deutsch
+    日本語
+    Italiano
+    हिन्दी
+  </div>
+  <div style="width: 100%; height: 1px; background-color: black;margin-top: 20px;"></div>
+
+  <div style="font-size: 12px; margin-top: 7px;margin-bottom: 7px; color: grey;">Sign upLog inMessengerFacebook
+    LiteVideoMeta PayMeta
+    StoreMeta QuestRay-Ban MetaMeta
+    AIMeta AI more
+    contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
+    PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
+  <div style="margin-top: 20px; font-size: 12px; margin-bottom: 15px; color: grey;">Meta © 2025</div>
+
+  <script>
+
+    const newAcc = () => {
+      window.location.href = "newAcc.html";
+    }
+  </script>
+</body>
+</html>
