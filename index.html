@@ -11,9 +11,11 @@
 
     @media (max-width: 600px) {
       #container {
+        display: flex;
         flex-direction: column;
         height: auto;
         padding: 20px;
+        align-items: center;
       }
 
       #form-container {
@@ -29,6 +31,12 @@
       #fb-header {
         font-size: 35px;
         text-align: center;
+      }
+      #newAcc-btn{display: flex;
+        justify-self: center;
+      }
+      #footer-text{
+         word-wrap: break-word;
       }
     }
 
@@ -56,17 +64,15 @@
       display: flex;
       justify-self: center;
       padding: 10px;
-      display: block;
     }
 
     #container {
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 20px;
       width: 100%;
-      min-height: 100vh;
+      height: auto;
       justify-content: center;
-      align-items: center;
       background-color: rgb(231, 231, 244);
     }
 
@@ -89,7 +95,7 @@
     }
 
     #form-container {
-      margin-right: 50px;
+      margin: 30px;
       border: 1px solid black;
       padding: 15px;
       background-color: white;
@@ -135,10 +141,12 @@
     }
 
     .footer-text {
-      margin-top: 25px;
+      margin-top: 15px;
       color: grey;
       font-size: 12px;
-      padding: 10px;
+      padding: 10px 20px;
+      word-spacing: 15px;
+      line-height: 1.5; 
     }
   </style>
 </head>
