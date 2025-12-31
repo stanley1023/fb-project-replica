@@ -9,18 +9,24 @@
       box-sizing: border-box;
     }
 
+    #left-column {
+      max-width: 500px;
+      margin-right: 60px;
+    }
+
+
     @media (max-width: 600px) {
       #container {
         display: flex;
         flex-direction: column;
         height: auto;
-        padding: 20px 15px;
+        padding: 20px 0;
         align-items: center;
       }
 
       .line-accross {
-        margin-left: 20px;
-        margin-right: 20px;
+        width: 100%;
+        margin: 20px 0;
       }
 
       #fb-header-sub-text {
@@ -29,14 +35,11 @@
 
 
       #form-container {
-        margin: 0;
-        margin-top: 20px;
+        margin: 20px auto;
         width: 100%;
         padding: 20px;
-        display: flex;
         justify-content: center;
-        margin-right: auto;
-        margin-left: auto;
+        max-width: 400px;
       }
 
       #form-container form {
@@ -80,6 +83,11 @@
         width: 100%;
         margin-bottom: 20px;
         align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      html{
+        overflow-x: hidden;
       }
     }
 
@@ -87,6 +95,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
     }
 
     #login-btn {
@@ -172,8 +181,8 @@
       height: 0.5px;
       width: 100%;
       background-color: black;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 20px auto;
+     max-width: 100%;
     }
 
     #create-a-page {
@@ -201,11 +210,7 @@
       margin-bottom: 80px;
     }
 
-    #left-column {
-      max-width: 500px;
-      margin-right: 60px;
-    }
-
+    
     #fb-header-sub-text {
       max-width: 500px;
       margin: 0 auto;
@@ -291,7 +296,8 @@
     <span>Cookies</span>
     <span>Terms</span>
     <span>Help</span>
-    <span>Settings</span>
+    <span>AdChoices</span>
+    <span>Contact uploading and non-usersSettings</span>
   </div>
   <div class="footer-text">Meta © 2025</div>
 
