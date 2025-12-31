@@ -17,10 +17,16 @@
         padding: 20px;
         align-items: center;
       }
+       .line-accross {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
       #form-container {
         margin: 0;
         margin-top: 20px;
+        width: 100%;
+        padding: 20px;
       }
 
       input,
@@ -41,6 +47,19 @@
         text-align: center;
         margin: 0;
       }
+      #left-column{
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 35px;
+      }
+      #left-column img {
+        width: 170px;
+      }
+
+      #right-column{
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
 
     body {
@@ -56,35 +75,39 @@
       border-style: none;
       max-width: 300px;
       width: 100%;
-      padding: 10px;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
     }
 
     #newAcc-btn {
       background-color: rgb(35, 182, 35);
       color: white;
+      font-size: 16px;
+      font-weight: bold;
       border-radius: 5px;
       border-style: none;
       display: block;
-      padding: 10px 20px;
+      padding: 15px 20px;
       margin: 0 auto;
     }
 
     #container {
       display: flex;
       align-items: center;
-      padding: 20px;
+      padding: 40px 60px;
       width: 100%;
-      height: auto;
+      min-height: 100vh;
       justify-content: center;
-      background-color: rgb(231, 231, 244);
+      background-color: rgb(242, 242, 247);
+      flex-wrap: wrap;
     }
 
     input {
       margin-bottom: 10px;
-      border-radius: 5px;
+      border-radius: 7px;
       border: 1px solid rgb(204, 208, 213);
-      padding: 10px;
-      max-width: 300px;
+      padding: 15px;
       width: 100%;
       font-size: 16px;
     }
@@ -96,11 +119,13 @@
 
     #form-container {
       margin: 30px;
-      border: 1px solid black;
-      padding: 15px;
+      padding: 20px 30px;
       background-color: white;
       border-style: none;
-      border-radius: 5px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 400px;
     }
 
     input:focus {
@@ -108,15 +133,10 @@
       outline: none;
     }
 
-    #fb-header {
-      color: rgb(8, 102, 255);
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-
     #fb-header-container {
       margin-left: 50px;
       margin-right: 20px;
+      text-align: center;
     }
 
     #forgotten-password {
@@ -138,6 +158,8 @@
     #create-a-page {
       font-size: 13px;
       text-align: center;
+      width: 100%;
+      margin-top: 20px;
     }
 
     .footer-text {
@@ -147,32 +169,65 @@
       padding: 10px 20px;
       word-spacing: 15px;
       line-height: 1.5;
+      max-width: 1000px;
+      margin: 0 auto;
     }
+
+    #right-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    #left-column{
+      max-width: 500px;
+margin-right: 60px;
+    }
+    #fb-header-sub-text{
+    max-width:500px;
+    margin: 0 auto;
+    font-size: 22px;
+    }
+    #login-btn:hover {
+  background-color: rgb(11, 104, 224);
+  cursor: pointer;
+}
+
+#newAcc-btn:hover {
+  background-color: rgb(30, 165, 2);
+  cursor: pointer;
+}
   </style>
 </head>
 
 <body>
   <div id="container">
-    <div id="fb-header-container">
-      <p id="fb-header">facebook</p>
-      <p>Facebook helps you connect and share with the people in your life.</p>
+    <div id="left-column">
+      <img style="width: 300px;" src="4lCu2zih0ca.svg"><br>
+      <p id="fb-header-sub-text">Facebook helps you connect and share with the people in your life.</p>
     </div>
-    <div id="form-container">
-      <form>
-        <input type="email" placeholder="Email address or phone number"> <br>
-        <input placeholder="Password">
-        <div><button id="login-btn" type="button">Log in</button></div>
-        <div id="forgotten-password">
-          Forgotten password?</div>
 
-        <div class="line-accross"></div>
+    <div id="right-column">
+      <div id="form-container">
+        <form>
+          <input type="email" placeholder="Email address or phone number"> <br>
+          <input placeholder="Password">
+          <div><button id="login-btn" type="button">Log in</button></div>
+          <div id="forgotten-password">
+            Forgotten password?</div>
 
-        <button id="newAcc-btn" type="button" onclick="newAcc()">create new account</button>
+          <div class="line-accross"></div>
 
-        <p id="create-a-page"><strong> create a page </strong>for a celebrity brand or
-          business</p>
-      </form>
+          <button id="newAcc-btn" type="button" onclick="newAcc()">create new account</button>
+
+
+        </form>
+      </div>
+      <div id="create-a-page"><strong> create a page </strong>for a celebrity brand or
+        business</div>
     </div>
+
   </div>
 
   <!-- FOOTER -->
@@ -190,12 +245,31 @@
   </div>
   <div class="line-accross"></div>
 
-  <div class="footer-text">Sign upLog inMessengerFacebook
-    LiteVideoMeta PayMeta
-    StoreMeta QuestRay-Ban MetaMeta
-    AIMeta AI more
-    contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
-    PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
+  <div class="footer-text">
+     <span>SignUp</span>
+      <span>LogIn</span>
+      <span>Messenger</span>
+      <span>Facebook</span>
+      <span>Video</span>
+      <span>metaPay</span>
+      <span>metaStore</span>
+      <span>metaQuest</span>
+      <span>Ray-Ban Meta</span>
+      <span>MetaAI</span>
+      <span>Instagram</span>
+      <span>Threads</span>
+      <span>Privacy Policy</span>
+      <span>Privacy Center</span>
+      <span>About</span>
+      <span>Create ad</span>
+      <span>Create Page</span>
+      <span>Developers</span>
+      <span>Careers</span>
+      <span>Cookies</span>
+      <span>Terms</span>
+      <span>Help</span>
+      <span>Settings</span>
+  </div>
   <div class="footer-text">Meta © 2025</div>
 
   <script>

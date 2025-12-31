@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> create new account</title>
+  <title> sign up page</title>
   <style>
     * {
       box-sizing: border-box;
@@ -27,11 +27,17 @@
       #gender {
         flex-direction: column;
       }
-      #row-two{
+
+      #row-two {
         width: 100%;
       }
-      #footer-container{
+
+      #footer-container {
         padding: 10px;
+      }
+
+      .gender-group {
+        flex-direction: column;
       }
     }
 
@@ -42,22 +48,26 @@
     }
 
     #sign-up {
-      background-color: rgb(35, 182, 35);
+      background-color: rgb(5, 196, 5);
       color: white;
-      padding: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px;
       border-style: none;
-      border-radius: 5px;
-      width: 100%;
+      border-radius: 7px;
       margin-bottom: 7px;
       margin-top: 7px;
+      padding-left: 60px;
+      padding-right: 60px;
     }
 
     #content-cover {
-      border: 1px solid black;
-      padding: 30px;
-      border-color: rgb(197, 195, 195);
+      border: 1px solid rgb(197, 195, 195);
+      padding: 15px;
       margin-bottom: 50px;
-      border-radius: 5px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
 
     #main-container {
@@ -72,12 +82,8 @@
     }
 
     input {
-      margin-bottom: 10px;
-      border-radius: 5px;
-      border-left-color: rgb(204, 208, 213);
-      border-right-color: rgb(204, 208, 213);
-      border-bottom-color: rgb(204, 208, 213);
-      border-top-color: rgb(204, 208, 213);
+      margin-bottom: 7px;
+      border-radius: 6px;
       border: 1px solid rgb(204, 208, 213);
       padding: 10px;
       width: 100%;
@@ -88,6 +94,7 @@
     ::placeholder {
       padding: 10px;
       font-size: 16px;
+      color: rgb(183, 180, 180);
     }
 
     input:focus {
@@ -107,18 +114,34 @@
       width: 100%;
     }
 
-    #gender {
+    .gender-group {
       display: flex;
       gap: 10px;
+      margin-bottom: 15px;
     }
+
+    .gender-option {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      border: 1px solid rgb(221, 212, 212);
+      padding: 8px 10px;
+      width: 100%;
+      border-radius: 7px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
 
     .footer-text {
       font-size: 12px;
       color: grey;
       padding: 10px;
-      word-wrap: break-word;
-      word-spacing: 15px;
+    gap: 10px;
       line-height: 1.5;
+      display: flex;
+    flex-wrap: wrap;
     }
 
     #sign-up-btn {
@@ -127,54 +150,69 @@
 
     #already-have-an-acc {
       text-align: center;
-      color: rgb(8, 102, 255)
+      color: rgb(8, 102, 255);
+      margin-top: 7px;
     }
 
-    #line-accross {
+    .line-accross {
       width: 100%;
       height: 1px;
-      background-color: black;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      background-color: #c2c1c1;
     }
 
     #footer-container {
-      width: 100% ;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+
     }
 
     select {
-  padding: 10px;
-  border: 1px solid rgb(204, 208, 213);
-  border-radius: 5px;
-  margin-bottom: 5px;
-  font-size: 16px;
-  background-color: white;
-  cursor: pointer;
-  width: 100%;
-}
+      padding: 10px;
+      border: 1px solid rgb(204, 208, 213);
+      border-radius: 5px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      background-color: white;
+      cursor: pointer;
+      width: 100%;
+    }
 
-select:focus {
-  border-color: rgb(8, 102, 255);
-  outline: none;
-}
+    select:focus {
+      border-color: rgb(8, 102, 255);
+      outline: none;
+    }
+
+    .form-text {
+      font-size: 12px;
+      color: grey;
+      padding: 5px;
+    }
+
+    span {
+      color: rgb(56, 88, 152)
+    }
   </style>
 </head>
 
 <body>
-  <div style="background-color: rgb(223, 223, 237);">
+  <div style="background-color: rgb(214, 214, 223);">
     <div id="main-container">
-      <div style="color:rgb(8, 102, 255) ; font-size: 30px; margin-top: 50px;">facebook</div>
+      <img style="width: 300px;" src="4lCu2zih0ca.svg">
 
       <div id="content-cover">
-        <div style="text-align: center;font-size: 30px; font-weight: bold;">create a new account</div>
-        <div style="text-align: center; margin-bottom: 7px;">it's quick and easy</div>
+        <div style="padding: 10px 20px; border-bottom: 1px solid rgb(194, 189, 189); margin-bottom: 20px;">
+          <div style="text-align: center;font-size: 30px; font-weight: bold;">create a new account</div>
+          <div style="text-align: center; margin-bottom: 5px;color: grey;">it's quick and easy</div>
+        </div>
+
 
         <form>
           <div id="row-two">
             <input placeholder="First name"> <input placeholder="Surname">
           </div>
 
-          <p>Date of birth</p>
+          <p style="font-size: 12px;color: grey;">Date of birth <span  style="display: inline-block; width: 14px; height: 14px; text-align: center; font-size: 10px; line-height: 14px;">&#x2753;</span></p>
           <div id="DOB">
             <select>
               <option value="">day</option>
@@ -234,11 +272,20 @@ select:focus {
             </select>
           </div>
 
-          <p>Gender</p>
-          <div id="gender">
-            <input placeholder="Female"> <input placeholder="Male"> <input placeholder="Custom">
-          </div>
+          <p style="font-size: 12px;color: grey;">Gender <span  style="display: inline-block; width: 14px; height: 14px; text-align: center; font-size: 10px; line-height: 14px;" >&#x2753;</span> </p>
+          <div class="gender-group">
+            <label class="gender-option">
+              Female<input type="radio" name="gender" placeholder="Female">
+            </label>
 
+            <label class="gender-option">
+              Male<input type="radio" name="gender" placeholder="Male">
+            </label>
+
+            <label class="gender-option">
+              Custom<input type="radio" name="gender" placeholder="Custom">
+            </label>
+          </div>
 
           <div>
             <input placeholder="Mobile number or email address">
@@ -247,17 +294,17 @@ select:focus {
             <input placeholder="New password">
           </div>
 
-          <p class="footer-text">people who use our service may have uploaded your contact information to Facebook.
+          <p class="form-text">people who use our service may have uploaded your contact information to Facebook.
             <span>learn more</span>
           </p>
-          <p class="footer-text">By clicking sign up, you agree to our <span>Terms, Privacy Policy</span> and
-            <span>Cookies Policy</span>.
+          <p class="form-text">By clicking sign up, you agree to our <span>Terms,
+              Privacy Policy</span> and
+            <span>Cookies Policy</span>.<br> you may receive SMS notifications from
+            us and can opt out at any time.
           </p>
-          <div class="footer-text">
-            you may receive SMS notifications from us and can opt out at any time.
-          </div>
+
           <div id="sign-up-btn">
-            <button id="sign-up" type="button">Sign Up</button>
+            <button id="sign-up" type="button">Sign up</button>
           </div>
           <div id="already-have-an-acc">Already have an account?</div>
         </form>
@@ -266,26 +313,46 @@ select:focus {
   </div>
   <!-- FOOTER -->
   <div id="footer-container">
-    <div class="footer-text">English (UK)
-      Hausa
-      Français (France)
-      Português (Brasil)
-      Español
-      العربية
-      Bahasa Indonesia
-      Deutsch
-      日本語
-      Italiano
-      हिन्दी
+    <div class="footer-text">English(UK)
+      <span>Hausa</span>
+      <span>Français (France)</span>
+      <span>Português (Brasil)</span>
+      <span>Español</span>
+      <span> العربية</span>
+      <span> Bahasa Indonesia</span>
+      <span> Deutsch</span>
+      <span>日本語</span>
+      <span>Italiano</span>
+      <span> हिन्दी</span>
     </div>
     <!-- LINE ACCROSS -->
-    <div id="line-accross"></div>
+    <div class="line-accross"></div>
 
-    <div class="footer-text">Sign upLog inMessengerFacebook LiteVideoMeta PayMeta
-      StoreMeta QuestRay-Ban MetaMeta
-      AIMeta AI more
-      contentInstagramThreadsVoting Information CentrePrivacy PolicyPrivacy CentreAboutCreate adCreate
-      PageDevelopersCareersCookiesAdChoicesTermsHelpContact uploading and non-usersSettings</div>
+    <div class="footer-text">
+      <span>Sign up</span>
+      <span>Log in</span>
+      <span>Messenger</span>
+      <span>Facebook</span>
+      <span>Video</span>
+      <span>meta Pay</span>
+      <span>meta store</span>
+      <span>meta quest</span>
+      <span>Ray-Ban Meta</span>
+      <span>Meta AI</span>
+      <span>Instagram</span>
+      <span>Threads</span>
+      <span>Privacy Policy</span>
+      <span>Privacy Center</span>
+      <span>About</span>
+      <span>Create ad</span>
+      <span>Create Page</span>
+      <span>Developers</span>
+      <span>Careers</span>
+      <span>Cookies</span>
+      <span>Terms</span>
+      <span>Help</span>
+      <span>Settings</span>
+    </div>
     <div class="footer-text">Meta © 2025</div>
   </div>
 
